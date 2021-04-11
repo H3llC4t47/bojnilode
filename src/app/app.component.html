@@ -1,0 +1,15 @@
+<table>
+  <tr *ngFor="let row of grid">
+    <td *ngFor="let field of row" (click)="shoot(field)">
+      <span *ngIf="field.shot==false">Nic</span>
+      <span *ngIf="field.ship==true && field.shot==true">Lod</span>
+      <span *ngIf="field.ship==false && field.shot==true">Voda</span>
+    </td>
+  </tr>
+</table>
+
+//custom datovej typ políčka, kterej má 2 booleany - 1. je voda/loď, 2. je prostřelen/neprostřelen
+
+generace pole - [][]  10x10
+
+random generace lodí/vody
